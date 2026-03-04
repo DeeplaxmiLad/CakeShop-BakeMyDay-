@@ -22,9 +22,11 @@ const Menu = () => {
   };
 
   const getAllCakes = () => {
-    axios.get(API_BASE_URL + "getCakes/").then(res => {
-      setcakes(res.data);
-    });
+   const products = [
+ { name: "Chocolate Cake", price: 500 },
+ { name: "Vanilla Cake", price: 400 }
+];
+    setcakes(products);
   };
   useEffect(() => {
     getAllCakes();
